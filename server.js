@@ -45,8 +45,8 @@ app.use('/order', authMiddleware, orderRouter);
 app.use('/register', registerRouter);
 app.use('/login', loginRouter);
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
-app.listen(PORT, () => {
+app.listen(PORT, '127.0.0.1', () => {
   console.log(`You're Successfully Connected On Localhost On Port ${PORT}`);
 });
